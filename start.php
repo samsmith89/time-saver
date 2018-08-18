@@ -26,6 +26,6 @@ function filter_function_name() {
    echo ('here are words');
  }
 }
-
 add_filter( 'the_content', 'filter_function_name' );
+
 register_activation_hook(__FILE__, 'install_pages');
