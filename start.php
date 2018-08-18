@@ -16,13 +16,16 @@
  *
  */
 
-$file = dirname(__FILE__) . '/page-init/create-init.php';
-require $file;
 
-add_action('template_redirect','your_function');
-function your_function() {
+require dirname(__FILE__) . '/page-init/create-init.php';
+
+
+// add_action('template_redirect','your_function');
+function filter_function_name() {
  if ( is_page('Repositories') ) {
    echo ('here are words');
  }
 }
+
+add_filter( 'the_content', 'filter_function_name' );
 register_activation_hook(__FILE__, 'install_pages');
