@@ -16,16 +16,8 @@
  *
  */
 
+// this requires and runs everything in init.php
+require dirname(__FILE__) . '/init.php';
 
-require dirname(__FILE__) . '/page-init/create-init.php';
-
-
-// add_action('template_redirect','your_function');
-function filter_function_name() {
- if ( is_page('Repositories') ) {
-   echo ('here are words');
- }
-}
-add_filter( 'the_content', 'filter_function_name' );
-
+// upon activation this creates all the needed pages 
 register_activation_hook(__FILE__, 'install_pages');
