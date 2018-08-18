@@ -20,7 +20,7 @@
  *
  * DISCLAIMER: This is provided as an EXAMPLE of how to do custom fields for Give. We provide no
  * guarantees if you put this on a live site. And we do not offer Support for this code at all.
- * It is simply a free resource for your purposes.
+ * It is simply a free resource for your purposes. this is a test change
  */
 
 
