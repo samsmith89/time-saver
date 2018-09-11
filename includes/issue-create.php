@@ -1,6 +1,8 @@
 <?php
 
 //This page houses the form for inputing issues into the database manually
+
+
 function issue_create_html() {
  if ( is_page('Manual Input') ) { ?>
  <form>
@@ -21,9 +23,11 @@ function issue_create_html() {
    </dl>
    <div>
      <input type="submit" value="Submit Issue" />
+     <?php echo 'sometext' ?>
    </div>
  </form>
  <?php
  }
 }
+
 add_filter( 'the_content', 'issue_create_html' );

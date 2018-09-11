@@ -19,5 +19,9 @@
 // this requires and runs everything in init.php
 require dirname(__FILE__) . '/init.php';
 
-// upon activation this creates all the needed pages 
+// upon activation this creates all the needed pages
 register_activation_hook(__FILE__, 'install_pages');
+
+//create the tables in the DB
+register_activation_hook( __FILE__, 'rem_init_gh_table' );
+register_activation_hook( __FILE__, 'rem_init_hs_table' );

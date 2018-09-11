@@ -1,0 +1,8 @@
+//Creates a new table for gh_issues:
+
+CREATE TABLE gh_issues (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  gh_link VARCHAR(255),
+  status TINYINT(1),
+  PRIMARY KEY (id)
+);
