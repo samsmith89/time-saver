@@ -15,8 +15,13 @@ function rem_init_gh_table() {
 
 	$sql = "CREATE TABLE $table_name (
 		id INT(11) NOT NULL AUTO_INCREMENT,
-	  gh_link VARCHAR(255),
+		ticket_id INT(11) NOT NULL,
+		wp_user INT(11) NOT NULL,
+		ticket_count INT(11) NOT NULL,
+	  issue_link VARCHAR(255),
+		issue_repo VARCHAR(255),
 	  status TINYINT(1),
+		notes VARCHAR(255),
 	  PRIMARY KEY (id)
 	) $charset_collate;";
 
@@ -44,8 +49,10 @@ function rem_init_hs_table() {
 
 	$sql = "CREATE TABLE $table_name (
 		id INT(11) NOT NULL AUTO_INCREMENT,
-	  gh_link VARCHAR(255),
-	  status TINYINT(1),
+		issue_id INT(11) NOT NULL,
+	  ticket_link VARCHAR(255),
+	  wp_user INT(11) NOT NULL,
+		notes VARCHAR(255),
 	  PRIMARY KEY (id)
 	) $charset_collate;";
 
